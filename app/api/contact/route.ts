@@ -21,9 +21,8 @@ export async function POST(req: NextRequest) {
     });
 
     await transporter.sendMail({
-      from: process.env.GMAIL_USER, // must be your Gmail
-      replyTo: email,               // allows you to reply to user
-      to: process.env.GMAIL_USER,   // receives the contact form
+      from: email,
+      to: process.env.GMAIL_USER,
       subject: `New Contact Form Message from ${name}`,
       text: message,
       html: `<p><strong>Name:</strong> ${name}</p>
