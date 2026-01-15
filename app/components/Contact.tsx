@@ -7,7 +7,9 @@ export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
@@ -28,7 +30,7 @@ export default function Contact() {
       } else {
         setStatus(data.error || "Failed to send message.");
       }
-    } catch (err) {
+    } catch {
       setStatus("Failed to send message.");
     }
   };
@@ -68,7 +70,7 @@ export default function Contact() {
           value={form.message}
           onChange={handleChange}
           rows={5}
-          className="border border-black/20 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
+          className="border border-black/20 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black resize-none"
           required
         />
         <button
