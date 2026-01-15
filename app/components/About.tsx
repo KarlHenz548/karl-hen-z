@@ -7,19 +7,19 @@ export default function About() {
   return (
     <section
       id="about"
-      className="w-full min-h-screen flex flex-col items-center bg-gradient-to-b from-white to-gray-50 px-6 sm:px-12 lg:px-20 py-12"
+      className="w-full min-h-screen flex flex-col items-center bg-linear-to-b from-white to-gray-50 px-6 sm:px-12 lg:px-20 py-12"
     >
       {/* Top: Profile Image + Text */}
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-24 w-full max-w-6xl">
         {/* Profile Image */}
         <motion.div
-          className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg rounded-3xl overflow-hidden shadow-xl h-64 sm:h-80 md:h-96 lg:h-[36rem] flex-shrink-0"
+          className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg rounded-3xl overflow-hidden shadow-xl h-64 sm:h-80 md:h-96 lg:h-144 shrink-0"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-gray-200 to-gray-100 blur-2xl opacity-40" />
+          <div className="absolute inset-0 rounded-3xl bg-linear-to-tr from-gray-200 to-gray-100 blur-2xl opacity-40" />
           <Image
             src="/picture.jpg"
             alt="Karl Hen’Z Profile"

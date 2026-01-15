@@ -101,7 +101,7 @@ export default function FloatingDockNavbar() {
             >
               {link.icon}
               {/* Tooltip */}
-              <span className="absolute bottom-[-1.75rem] rounded-md bg-black text-white text-xs px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+              <span className="absolute -bottom-7 rounded-md bg-black text-white text-xs px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
                 {link.title}
               </span>
             </button>
@@ -119,7 +119,7 @@ function MobileMenu({
   links,
   scrollToSection,
 }: {
-  links: any[];
+  links: { title: string; href: string; icon: React.ReactNode }[];
   scrollToSection: (href: string) => void;
 }) {
   const [open, setOpen] = useState(false);

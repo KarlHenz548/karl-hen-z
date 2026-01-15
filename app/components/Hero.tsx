@@ -9,7 +9,7 @@ export default function Hero() {
       id="hero"
       className="
         w-full min-h-screen flex items-center justify-center
-        bg-gradient-to-br from-white to-gray-50
+        bg-linear-to-br from-white to-gray-50
         px-6 sm:px-8 lg:px-12 py-20
       "
     >
@@ -30,7 +30,7 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.8 }}
         >
           Building Modern
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-black to-gray-700">
+          <span className="block text-transparent bg-clip-text bg-linear-to-r from-black to-gray-700">
             Web Experiences
           </span>
         </motion.h1>
@@ -45,7 +45,8 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
-          I’m a fresh Computer Engineering graduate crafting **clean, responsive, and high-performance web applications** using{" "}
+          I’m a fresh Computer Engineering graduate crafting **clean,
+          responsive, and high-performance web applications** using{" "}
           <span className="font-semibold">Next.js</span>,{" "}
           <span className="font-semibold">TypeScript</span>, and{" "}
           <span className="font-semibold">TailwindCSS</span>.
