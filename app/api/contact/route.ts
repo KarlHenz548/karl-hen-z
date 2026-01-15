@@ -21,14 +21,16 @@ export async function POST(req: NextRequest) {
     });
 
     await transporter.sendMail({
-      from: email,
-      to: process.env.GMAIL_USER,
+      from: process.env.GMAIL_USER, // must be your Gmail
+      replyTo: email,               // allows replies to the user's email
+      to: process.env.GMAIL_USER,   // where you receive contact form messages
       subject: `New Contact Form Message from ${name}`,
       text: message,
       html: `<p><strong>Name:</strong> ${name}</p>
              <p><strong>Email:</strong> ${email}</p>
              <p><strong>Message:</strong> ${message}</p>`,
     });
+
 
     return NextResponse.json({ message: "Message sent successfully!" });
   } catch (err) {
