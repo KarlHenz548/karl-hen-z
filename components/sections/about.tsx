@@ -18,10 +18,10 @@ export default function About() {
           </h3>
 
           <p className="mt-5 leading-relaxed text-foreground/80">
-            I&apos;m a Computer Engineering graduate focused on full-stack
-            development and software engineering. I build web applications using
-            modern technologies, with an emphasis on clean code, maintainable
-            architecture, and practical solutions to real-world problems.
+            I&apos;m a Computer Engineering graduate focused on software
+            engineering. I build web applications using modern technologies,
+            with an emphasis on clean code, maintainable architecture, and
+            practical solutions to real-world problems.
           </p>
 
           <p className="mt-4 leading-relaxed text-foreground/80">

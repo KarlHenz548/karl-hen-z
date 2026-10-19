@@ -1,3 +1,7 @@
+import Image from "next/image";
+import Link from "next/link";
+import { siGithub } from "simple-icons/icons";
+
 export default function Projects() {
   const projects = [
     {
@@ -5,20 +9,26 @@ export default function Projects() {
       category: "Inventory Management",
       description:
         "An inventory management system for tracking products, stock movements, and business operations.",
+      // Add githubUrl when your repository is ready.
     },
     {
       title: "E-Commerce Platform",
       category: "E-Commerce Website",
       description:
         "An online shopping platform featuring product browsing, a shopping cart, and order management.",
+      // Add githubUrl when your repository is ready.
     },
     {
-      title: "Booking System",
-      category: "Booking Website",
+      title: "Stayora",
+      category: "Hotel Booking Platform",
       description:
-        "A booking platform for managing reservations, schedules, and customer appointments.",
+        "A full-stack hotel booking platform featuring hotel listings, room availability, reservations, and an admin dashboard.",
+      liveUrl: "https://stayora-pexk.vercel.app/",
+      githubUrl: "https://github.com/KarlHenz548/stayora",
+      thumbnail: "/stayora.png",
     },
   ];
+
   return (
     <section id="projects" className="mx-auto w-full max-w-7xl px-8 py-20">
       <div className="mb-12">
@@ -42,9 +52,34 @@ export default function Projects() {
             className="rounded-3xl border border-[#e8d7c4] bg-[#fff4e6] p-6 shadow-[8px_8px_18px_#d6c8b8] transition-transform duration-300 hover:scale-105 dark:border-[#3c2f2f] dark:bg-[#4b3832] dark:shadow-[8px_8px_18px_#2a201d]"
             key={project.title}
           >
-            <div className="mb-5 flex aspect-video items-center justify-center rounded-2xl bg-[#f1dfcc] text-[#854442] dark:bg-[#3c2f2f] dark:text-[#be9b7b]">
-              <span className="text-2xl font-bold">Project Preview</span>
-            </div>
+            {project.liveUrl ? (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View ${project.title} live demo`}
+                className="mb-5 block overflow-hidden rounded-2xl"
+              >
+                {project.thumbnail ? (
+                  <Image
+                    src={project.thumbnail}
+                    alt={`${project.title} website preview`}
+                    width={1200}
+                    height={675}
+                    className="aspect-video w-full rounded-2xl bg-[#f1dfcc] object-center hover:scale-105 duration-300"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="flex aspect-video items-center justify-center rounded-2xl bg-[#f1dfcc] text-[#854442] dark:bg-[#3c2f2f] dark:text-[#be9b7b]">
+                    <span className="text-2xl font-bold">Project Preview</span>
+                  </div>
+                )}
+              </a>
+            ) : (
+              <div className="mb-5 flex aspect-video items-center justify-center rounded-2xl bg-[#f1dfcc] text-[#854442] dark:bg-[#3c2f2f] dark:text-[#be9b7b]">
+                <span className="text-2xl font-bold">Project Preview</span>
+              </div>
+            )}
 
             <p className="text-sm font-medium tracking-widest text-brand uppercase">
               {project.category}
@@ -57,6 +92,39 @@ export default function Projects() {
             <p className="mt-3 leading-relaxed text-foreground/80">
               {project.description}
             </p>
+
+            <div className="mt-5 flex flex-wrap items-center gap-5">
+              {project.liveUrl && (
+                <Link
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-semibold text-brand underline-offset-4 hover:underline"
+                >
+                  View Live Demo
+                </Link>
+              )}
+
+              {project.githubUrl && (
+                <Link
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View ${project.title} GitHub repository`}
+                  className="inline-flex items-center gap-2 font-semibold text-foreground transition-colors hover:text-brand"
+                >
+                  <svg
+                    role="img"
+                    viewBox="0 0 24 24"
+                    className="size-6 fill-current"
+                    aria-label="GitHub"
+                  >
+                    <path d={siGithub.path} />
+                  </svg>
+                  GitHub
+                </Link>
+              )}
+            </div>
           </article>
         ))}
       </div>

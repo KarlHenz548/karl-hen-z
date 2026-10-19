@@ -34,7 +34,7 @@ export default function Contact() {
             href="https://mail.google.com/mail/?view=cm&fs=1&to=karlhenz04@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 rounded-xl bg-[#854442] px-6 py-3 font-semibold text-white transition-transform duration-300 hover:-translate-y-1"
+            className="inline-flex items-center justify-center gap-3 rounded-xl bg-[#854442] px-6 py-3 font-semibold text-white transition-transform duration-300 hover:scale-105"
           >
             <svg
               aria-hidden="true"
@@ -51,18 +51,17 @@ export default function Contact() {
             href="https://github.com/KarlHenz548"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 rounded-xl border border-[#e8d7c4] px-6 py-3 font-semibold text-foreground transition-transform duration-300 hover:-translate-y-1 dark:border-[#654c45]"
+            className="inline-flex items-center justify-center gap-3 rounded-xl border border-[#e8d7c4] px-6 py-3 font-semibold text-foreground transition-transform duration-300 hover:scale-105 dark:border-[#654c45]"
           >
             <svg
               aria-hidden="true"
               viewBox="0 0 24 24"
-              className="size-5"
+              className="size-6"
               fill="currentColor"
             >
               <path d={siGithub.path} />
             </svg>
             GitHub
-            <span aria-hidden="true">↗</span>
           </Link>
         </div>
       </div>

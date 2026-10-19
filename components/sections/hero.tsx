@@ -15,7 +15,7 @@ export default function Hero() {
           Karl Hen&apos;z Ferrer
         </h1>
         <h2 className="text-2xl font-semibold leading-snug text-brand">
-          Software Engineer
+          Aspiring Software Engineer
         </h2>
         <p className="text-base leading-relaxed text-foreground/80 max-w-xl">
           I build modern web applications with thoughtful user experiences and
