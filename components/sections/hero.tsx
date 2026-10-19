@@ -30,7 +30,7 @@ export default function Hero() {
           </Link>
 
           <Link
-            href="/resume/karl-henz-ferrer-resume.pdf"
+            href="/resume/Resume.pdf"
             download
             className="rounded-xl border border-[#e8d7c4] bg-[#fff4e6] px-6 py-3 font-semibold text-[#3c2f2f] shadow-[6px_6px_12px_#d6c8b8] transition-all duration-200 hover:scale-105 active:translate-y-0.5 active:scale-95 active:shadow-[inset_4px_4px_12px_#d6c8b8] dark:border-[#3c2f2f] dark:bg-[#4b3832] dark:text-[#fff4e6] dark:shadow-[6px_6px_12px_#2a201d] dark:active:shadow-[inset_4px_4px_12px_#2a201d,inset_-4px_-4px_12px_#654c45]"
           >
